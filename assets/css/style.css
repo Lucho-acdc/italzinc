@@ -1,0 +1,590 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+
+/* Importando las tipografías */
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400&family=Poppins:wght@500;700&display=swap');
+
+/* Estilos generales del cuerpo */
+body {
+  font-family: 'Lato', sans-serif !important;
+  color: #333; /* Color principal del texto */
+  background-color: #f8f9fa; /* Fondo claro */
+  line-height: 1.7; /* Aumenta el espaciado entre líneas para legibilidad */
+}
+
+/* Títulos */
+h1, h2, h3 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700; /* Peso mayor para títulos */
+  color: #dd1414; /* Rojo para crear contraste */
+  margin-bottom: 20px;
+}
+
+h1 {
+  font-size: 3.5rem;
+}
+
+h2 {
+  font-size: 2.5rem;
+}
+
+h3 {
+  font-size: 2rem;
+}
+
+/* Párrafos */
+p {
+  font-family: 'Lato', sans-serif;
+  font-size: 1.1rem;
+  color: #666; /* Un gris claro para el texto */
+  margin-bottom: 20px;
+}
+
+/* Links */
+a {
+  font-family: 'Lato', sans-serif;
+  font-size: 1rem;
+  color: #dd1414; /* Rojo para enlaces */
+  text-decoration: none;
+}
+
+a:hover {
+  color: #bb1010; /* Rojo más oscuro en hover */
+}
+
+/* Estilo para la navbar */
+.navbar-dark .navbar-nav .nav-link {
+  font-family: 'Lato', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: #333; /* Texto de la barra de navegación */
+}
+
+.nav-link.active,
+.nav-link:hover {
+  color: #dd1414 !important; /* Color rojo para los links activos o en hover */
+  font-weight: 500;
+}
+
+/* Estilos para la sección de bienvenida */
+#home {
+  height: 100vh; /* Ocupa toda la altura del viewport */
+  padding-top: 100px;
+  display: flex; /* Flexbox para centrar el contenido */
+  flex-direction: column; /* Apila los elementos verticalmente */
+  justify-content: center; /* Centra el contenido verticalmente */
+  align-items: center; /* Centra el contenido horizontalmente */
+  padding: 20px;
+  text-align: center;
+  margin-bottom: 0px !important;
+}
+
+#home img {
+  max-width: 100%; /* Asegura que la imagen no se desborde horizontalmente */
+  max-height: 50vh; /* Asegura que la imagen no ocupe más de la mitad del viewport */
+  height: auto; /* Mantiene las proporciones de la imagen */
+  width: auto;
+}
+
+.main-circle {
+  position: relative;
+  z-index: 1;
+  animation: fadeIn 2s forwards;
+}
+
+.orbit-circle {
+  position: absolute;
+  border-radius: 50%;
+  border: 2px solid rgba(255, 0, 0, 0.5);
+  animation: orbit 10s infinite alternate ease-in-out;
+
+}
+
+.orbit-1 {
+  width: 200px;
+  height: 200px;
+  top: 10%;
+  left: 15%;
+  animation-duration: 10s;
+}
+
+.orbit-2 {
+  width: 400px;
+  height: 400px;
+  top: 20%;
+  right: 10%;
+  animation-duration: 14s;
+}
+
+.orbit-3 {
+  width: 300px;
+  height: 300px;
+  bottom: 15%;
+  left: 20%;
+  animation-duration: 12s;
+}
+
+@keyframes orbit {
+  from {
+    transform: rotate(0deg) translateX(100px);
+  }
+  to {
+    transform: rotate(360deg) translateX(100px);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+
+/* Estilo de la sección de contacto */
+.contact-section h2 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.contact-section p {
+  font-family: 'Lato', sans-serif;
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #666;
+}
+
+/* Botones */
+button {
+  font-family: 'Lato', sans-serif;
+  font-size: 1rem;
+  background-color: #dd1414;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #bb1010;
+}
+
+
+#header {
+  background-color: transparent;
+  transition: background-color 0.3s ease;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: white;
+}
+
+.navbar .container-fluid {
+  padding-inline: 50px;
+}
+
+.navbar-brand img {
+  max-width: 80%; /* Ajusta este valor para el tamaño del logo */
+  height: auto; /* Mantiene la proporción del logo */
+  object-fit: contain;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+  font-size: 16px;
+  font-weight: 400;
+  color: black;
+}
+
+.navbar-dark .navbar-nav .nav-link.active {
+  color: #ff0000; /* Rojo para el elemento activo */
+}
+
+.nav-link {
+  position: relative;
+  color: black; /* Ajusta el color inicial del enlace */
+  text-decoration: none;
+}
+
+.nav-link.active,
+.nav-link:hover {
+  color: #dd1414 !important; /* Color del enlace en hover y estado activo */
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0px; /* Ajusta la posición de la línea */
+  left: 50%;
+  background-color: #dd1414; /* Color de la línea */
+  transition: width 0.3s ease, left 0.3s ease;
+}
+
+.nav-link.active::after {
+  width: 90%; /* La línea se estira al 90% del ancho */
+  left: 5%;
+}
+
+section {
+  min-height: 100vh; /* Asegura que cada sección ocupe al menos la pantalla completa */
+  scroll-margin-top: 70px; /* Ajusta este valor al tamaño de tu navbar */
+}
+
+
+
+.about-section {
+  padding: 60px 0;
+  background-color: #f9f9f9;
+}
+
+.about-img img {
+  border-radius: 8px;
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.about-content h2 {
+  font-size: 2.5rem;
+  color: var(--heading-color);
+  margin-bottom: 20px;
+}
+
+.about-content p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: var(--default-color);
+  margin-bottom: 20px;
+}
+
+.about-content .btn {
+  padding: 10px 20px;
+  font-size: 1.1rem;
+  background-color: var(--accent-color);
+  color: var(--contrast-color);
+  border-radius: 25px;
+}
+
+
+#procesos {
+  height: 100vh; /* Altura completa de la ventana */
+}
+
+#procesos img {
+  width: 100%; /* Imagen ocupa el 100% del ancho */
+  height: auto; /* Mantener las proporciones */
+}
+
+.services-section {
+  padding: 50px 0;
+}
+
+.portfolio-card {
+  margin-bottom: 30px;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border: 1px solid #ddd;
+  overflow: hidden;
+}
+
+.portfolio-card:hover {
+  transform: scale(1.05); /* Efecto al pasar el mouse */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Sombra al hacer hover */
+}
+
+.portfolio-wrapper {
+  text-align: center;
+}
+
+.portfolio-image {
+  width: 100%;
+  height: 200px; /* Ajusta el tamaño a tus necesidades */
+  overflow: hidden;
+  margin-bottom: 15px;
+}
+
+.portfolio-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Asegura que la imagen se ajuste bien al contenedor */
+  transition: transform 0.3s ease-in-out; /* Transición de la imagen */
+}
+
+.portfolio-card:hover .portfolio-image img {
+  transform: scale(1.1); /* Efecto zoom al pasar el mouse */
+}
+
+.portfolio-text {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #333;
+  padding: 10px 0;
+}
+
+.portfolio-info {
+  display: none;
+}
+
+.portfolio-card:hover .portfolio-info {
+  display: block;
+  color: #666;
+  font-size: 1rem;
+}
+
+.portfolio-card {
+  opacity: 0;
+  transform: translateY(20px); /* Las tarjetas estarán ligeramente desplazadas hacia abajo por defecto */
+  transition: all 0.5s ease-in-out; /* Controla la suavidad de la animación */
+}
+
+.portfolio-card.appear {
+  opacity: 1;
+  transform: translateY(0); /* Cuando la tarjeta es visible, vuelve a su posición original */
+}
+
+.calidad-section {
+  padding: 60px 0;
+  background-color: #f9f9f9;
+}
+
+.calidad-section .section-title {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.calidad-section .section-title h2 {
+  font-size: 2.5rem;
+  color: #333;
+}
+
+.calidad-section .section-title p {
+  font-size: 1.1rem;
+  color: #777;
+}
+
+.calidad-section .row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.calidad-section img.img-fluid {
+  border-radius: 8px;
+  width: 100%;
+  height: auto;
+}
+
+.calidad-section h3 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  color: #dd1414;
+}
+
+.calidad-section p {
+  font-size: 1.1rem;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.calidad-section ul li {
+  font-size: 1.1rem;
+  color: #555;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.calidad-section ul li i {
+  color: #dd1414;
+  margin-right: 10px;
+  font-size: 1.2rem;
+}
+
+.calidad-section .btn-primary {
+  background-color: #dd1414;
+  border-color: #dd1414;
+}
+
+.calidad-section .btn-primary:hover {
+  background-color: #bb1010;
+  border-color: #bb1010;
+}
+
+
+.clients-section {
+  padding: 60px 0;
+  background-color: #f1f1f1;
+}
+
+.row{
+  margin-block: 20px;
+}
+
+.section-title {
+  margin-bottom: 40px;
+}
+
+.section-title h2 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.section-title p {
+  font-size: 1.1rem;
+  color: #6c757d;
+}
+
+.client-card {
+  text-align: center;
+  background: white;
+  padding: 20px;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.client-card img {
+  max-width: 150px;
+  margin-bottom: 20px;
+}
+
+.client-card p {
+  font-size: 1.1rem;
+  color: #333;
+}
+
+.client-card:hover {
+  transform: translateY(-10px);
+}
+
+.environment-section {
+  padding: 60px 20px;
+  background-color: #f5f5f5;
+  text-align: center;
+}
+
+.environment-section .section-title {
+  margin-bottom: 40px;
+}
+
+.environment-section .section-title h2 {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.environment-section .section-title p {
+  font-size: 1.2rem;
+  color: #555;
+}
+
+.environment-section .content p {
+  font-size: 1.1rem;
+  color: #333;
+  line-height: 1.8;
+  margin-bottom: 20px;
+  text-align: justify;
+}
+
+.environment-section .content p:last-child {
+  margin-bottom: 0;
+}
+
+
+.contact-section {
+  padding: 60px 0;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+.contact-section .container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: stretch;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.contact-section .info-box,
+.contact-section .php-email-form,
+.contact-section .map-container {
+  flex: 1;
+  min-width: 300px;
+  padding: 20px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin: 10px;
+}
+
+.contact-section .php-email-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.contact-section h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.contact-section p {
+  margin-bottom: 20px;
+}
+
+.contact-section .form-group {
+  margin-bottom: 15px;
+}
+
+.contact-section .form-group input,
+.contact-section .form-group textarea {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+.contact-section .php-email-form button {
+  background-color: #dd1414;
+  border: none;
+  padding: 10px 30px;
+  color: white;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.contact-section .php-email-form button:hover {
+  background-color: #bb1010;
+}
+
+.contact-section .map-container iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  border-radius: 8px;
+}
+
+.contact-section .info-box {
+  text-align: left;
+}
+
+.contact-section .info-box h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.contact-section .info-box p {
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
