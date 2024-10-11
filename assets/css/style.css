@@ -624,8 +624,83 @@ section {
   display: none; /* El mapa pequeño está oculto en pantallas grandes */
 }
 
+
+/* Estilos específicos para pantallas tipo tablet */
+@media (min-width: 769px) and (max-width: 1024px) {
+  /* Ajusta el tamaño del logo */
+  .navbar-brand img {
+    max-width: 40%;
+  }
+
+  /* Ajustes para la navegación en tablet */
+  .navbar-nav {
+    flex-direction: row;
+    justify-content: flex-end;
+  }
+
+  .nav-link {
+    padding: 10px;
+    font-size: 16px; /* Tamaño de fuente más grande en tablet */
+  }
+
+  /* Ajustes en la sección home para tablet */
+  #home img {
+    max-width: 60%; /* Tamaño reducido en tablets */
+  }
+
+  .orbit-circle {
+    transform: scale(0.75); /* Escala más pequeña para los círculos en tablets */
+  }
+
+  /* Orbit 1 ajustes */
+  .orbit-1 {
+    width: 150px;  /* Ajusta al 75% */
+    height: 150px;
+  }
+
+  /* Orbit 2 ajustes */
+  .orbit-2 {
+    width: 300px;
+    height: 300px;
+  }
+
+  /* Orbit 3 ajustes */
+  .orbit-3 {
+    width: 225px;
+    height: 225px;
+  }
+
+  /* Ajustes para la sección de calidad */
+  .calidad-section .row {
+    flex-direction: row; /* Mantener la imagen y el texto en línea horizontal en tablets */
+  }
+
+  /* Sección de contacto en tablet */
+  .contact-section .map-container-xl,
+  .contact-section .info-box {
+    width: 100%; /* Asegura que el mapa y el contenido ocupen todo el ancho de la pantalla */
+  }
+  
+  .php-email-form {
+    width: 100%; /* El formulario también debe ocupar el 100% del ancho en tablets */
+  }
+}
+
+
 /* Ajustes de la navbar en pantallas pequeñas */
 @media (max-width: 768px) {
+
+  #header {
+    position: fixed;
+    top: 0;
+    width: 100vw;
+  }
+
+  section {
+    min-height: 100vh; /* Asegura que cada sección ocupe al menos la pantalla completa */
+    scroll-margin-top: 50px; /* Ajusta este valor al tamaño de tu navbar */
+  }
+
   .navbar-brand img {
     max-width: 100px;
   }
