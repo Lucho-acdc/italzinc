@@ -3,6 +3,9 @@
 /* Importando las tipografías */
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400&family=Poppins:wght@500;700&display=swap');
 
+/* Importando las tipografías */
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400&family=Poppins:wght@500;700&display=swap');
+
 /* Estilos generales del cuerpo */
 body {
   font-family: 'Lato', sans-serif !important;
@@ -51,19 +54,91 @@ a:hover {
   color: #bb1010; /* Rojo más oscuro en hover */
 }
 
-/* Estilo para la navbar */
-.navbar-dark .navbar-nav .nav-link {
+/* Botones */
+button {
   font-family: 'Lato', sans-serif;
-  font-size: 16px;
+  font-size: 1rem;
+  background-color: #dd1414;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #bb1010;
+}
+
+section {
+  min-height: 100vh; /* Asegura que cada sección ocupe al menos la pantalla completa */
+  scroll-margin-top: 0px; /* Ajusta este valor al tamaño de tu navbar */
+}
+
+
+/* Navbar */
+#header {
+  background-color: rgba(255, 255, 255, 0.9); /* Transparencia para darle un toque flotante */
+  backdrop-filter: blur(10px); /* Efecto de desenfoque detrás de la navbar */
+  transition: background-color 0.3s ease;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  padding: 5px 0; /* Padding más reducido */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); /* Sombra más sutil */
+}
+
+.navbar .container-fluid {
+  padding-inline: 10px; /* Padding lateral más reducido */
+}
+
+.navbar-brand img {
+  max-width: 50%; /* Logo más pequeño */
+  height: auto;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+  font-size: 14px;
   font-weight: 400;
-  color: #333; /* Texto de la barra de navegación */
+  color: #333;
+  padding: 5px 10px;
+  transition: color 0.4s ease; /* Transición más lenta para suavidad */
+}
+
+.navbar-dark .navbar-nav .nav-link.active {
+  color: #dd1414;
+  font-weight: 600;
+}
+
+.nav-link {
+  position: relative;
+  color: #333;
+  text-decoration: none;
 }
 
 .nav-link.active,
 .nav-link:hover {
-  color: #dd1414 !important; /* Color rojo para los links activos o en hover */
-  font-weight: 500;
+  color: #dd1414 !important; /* Color del enlace en hover y activo */
+  text-shadow: 0 0 5px rgba(255, 0, 0, 0.3); /* Sombra suave en hover */
 }
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -5px;
+  left: 50%;
+  background-color: #dd1414; /* Línea más delgada y elegante */
+  transition: width 0.4s ease, left 0.4s ease; /* Transiciones más lentas */
+}
+
+.nav-link.active::after {
+  width: 90%; /* Estiramiento suave al 90% del ancho */
+  left: 5%;
+}
+
 
 /* Estilos para la sección de bienvenida */
 #home {
@@ -96,7 +171,6 @@ a:hover {
   border-radius: 50%;
   border: 2px solid rgba(255, 0, 0, 0.5);
   animation: orbit 10s infinite alternate ease-in-out;
-
 }
 
 .orbit-1 {
@@ -144,6 +218,7 @@ a:hover {
 }
 
 
+
 /* Estilo de la sección de contacto */
 .contact-section h2 {
   font-family: 'Poppins', sans-serif;
@@ -158,86 +233,6 @@ a:hover {
   line-height: 1.7;
   color: #666;
 }
-
-/* Botones */
-button {
-  font-family: 'Lato', sans-serif;
-  font-size: 1rem;
-  background-color: #dd1414;
-  color: white;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 4px;
-  transition: background-color 0.3s ease;
-}
-
-button:hover {
-  background-color: #bb1010;
-}
-
-
-#header {
-  background-color: transparent;
-  transition: background-color 0.3s ease;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 1000;
-  background-color: white;
-}
-
-.navbar .container-fluid {
-  padding-inline: 50px;
-}
-
-.navbar-brand img {
-  max-width: 80%; /* Ajusta este valor para el tamaño del logo */
-  height: auto; /* Mantiene la proporción del logo */
-  object-fit: contain;
-}
-
-.navbar-dark .navbar-nav .nav-link {
-  font-size: 16px;
-  font-weight: 400;
-  color: black;
-}
-
-.navbar-dark .navbar-nav .nav-link.active {
-  color: #ff0000; /* Rojo para el elemento activo */
-}
-
-.nav-link {
-  position: relative;
-  color: black; /* Ajusta el color inicial del enlace */
-  text-decoration: none;
-}
-
-.nav-link.active,
-.nav-link:hover {
-  color: #dd1414 !important; /* Color del enlace en hover y estado activo */
-}
-
-.nav-link::after {
-  content: '';
-  position: absolute;
-  width: 0;
-  height: 2px;
-  bottom: 0px; /* Ajusta la posición de la línea */
-  left: 50%;
-  background-color: #dd1414; /* Color de la línea */
-  transition: width 0.3s ease, left 0.3s ease;
-}
-
-.nav-link.active::after {
-  width: 90%; /* La línea se estira al 90% del ancho */
-  left: 5%;
-}
-
-section {
-  min-height: 100vh; /* Asegura que cada sección ocupe al menos la pantalla completa */
-  scroll-margin-top: 70px; /* Ajusta este valor al tamaño de tu navbar */
-}
-
 
 
 .about-section {
@@ -265,12 +260,14 @@ section {
   margin-bottom: 20px;
 }
 
-.about-content .btn {
-  padding: 10px 20px;
-  font-size: 1.1rem;
-  background-color: var(--accent-color);
-  color: var(--contrast-color);
-  border-radius: 25px;
+.about-content .btn-primary {
+  background-color: #dd1414;
+  border-color: #dd1414;
+}
+
+.about-content .btn-primary:hover {
+  background-color: #bb1010;
+  border-color: #bb1010;
 }
 
 
@@ -286,6 +283,7 @@ section {
 .services-section {
   padding: 50px 0;
 }
+
 
 .portfolio-card {
   margin-bottom: 30px;
