@@ -72,7 +72,7 @@ button:hover {
 
 section {
   min-height: 100vh; /* Asegura que cada sección ocupe al menos la pantalla completa */
-  scroll-margin-top: 0px; /* Ajusta este valor al tamaño de tu navbar */
+  scroll-margin-top: 60px; /* Ajusta este valor al tamaño de tu navbar */
 }
 
 
@@ -83,58 +83,26 @@ section {
   transition: background-color 0.3s ease, padding 0.3s ease; /* Añadida transición para padding */
   position: fixed;
   top: 0;
-  width: 100%;
+  width: 100vw;
   z-index: 1000;
   padding: 5px 0; /* Padding más reducido */
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); /* Sombra más sutil */
 }
 
 .navbar .container-fluid {
+  width: 100vw;
   padding-inline: 10px; /* Padding lateral más reducido */
+}
+
+.navbar .container-fluid .collapse {
+  flex-grow: 0;
+  align-items: end;
+  padding-inline: 10px;
 }
 
 .navbar-brand img {
   max-width: 50%; /* Logo más pequeño */
   height: auto;
-}
-
-/* Para pantallas pequeñas (mobile) */
-@media (max-width: 768px) {
-  .navbar-brand img {
-    max-width: 100px; /* Tamaño del logo más pequeño en móviles */
-    height: auto;
-  }
-  /* Ajustes para dispositivos móviles */
-@media (max-width: 768px) {
-  .navbar-brand img {
-    max-width: 100px; /* Tamaño del logo más pequeño en móviles */
-    height: auto;
-  }
-
-  /* Asegura que el menú colapsado se despliegue correctamente */
-  .navbar-toggler {
-    border: none;
-  }
-
-  .navbar-toggler-icon {
-    background-color: #333; /* Color del ícono hamburguesa */
-  }
-
-  .navbar-collapse {
-    justify-content: flex-end;
-  }
-
-  .nav-link {
-    color: #333;
-    text-align: right;
-    padding-right: 20px; /* Para alinear mejor los elementos */
-  }
-
-  .nav-link:hover {
-    color: #dd1414;
-  }
-}
-
 }
 
 
@@ -543,6 +511,204 @@ section {
 }
 
 
+/* Estilos generales de la sección de contacto */
+.contact-section {
+  padding: 60px 0;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+/* Contenedor principal de la sección */
+.contact-section .container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: stretch;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Estilos para las cajas de información, formulario y mapa */
+.contact-section .info-box,
+.contact-section .php-email-form,
+.contact-section .map-container-xl {
+  flex: 1;
+  min-width: 300px;
+  padding: 20px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin: 10px;
+}
+
+/* Formulario de contacto */
+.contact-section .php-email-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Títulos de la sección */
+.contact-section h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+/* Párrafos dentro de la sección */
+.contact-section p {
+  margin-bottom: 20px;
+}
+
+/* Estilos para los campos del formulario */
+.contact-section .form-group {
+  margin-bottom: 15px;
+}
+
+/* Estilos para los inputs y textarea del formulario */
+.contact-section .form-group input,
+.contact-section .form-group textarea {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+/* Estilos para el botón de enviar del formulario */
+.contact-section .php-email-form button {
+  background-color: #dd1414;
+  border: none;
+  padding: 10px 30px;
+  color: white;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Hover para el botón de enviar */
+.contact-section .php-email-form button:hover {
+  background-color: #bb1010;
+}
+
+/* Estilos para el iframe del mapa */
+.contact-section .map-container-xl iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  border-radius: 8px;
+}
+
+/* Caja de información de contacto (dirección, teléfono, etc.) */
+.contact-section .info-box {
+  text-align: left;
+}
+
+/* Estilos para los títulos de las cajas de información */
+.contact-section .info-box h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+/* Estilos para los párrafos dentro de las cajas de información */
+.contact-section .info-box p {
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+
+/* Estilo del mapa en pantallas grandes (desktop) */
+.map-container-xl {
+  display: block; /* El mapa es visible en pantallas grandes */
+}
+
+.map-container-xs {
+  display: none; /* El mapa pequeño está oculto en pantallas grandes */
+}
+
+/* Ajustes de la navbar en pantallas pequeñas */
+@media (max-width: 768px) {
+  .navbar-brand img {
+    max-width: 100px;
+  }
+
+  .navbar-toggler {
+    margin-left: auto;
+    border: none;
+    padding: 0;
+    right: 0;
+    border: none;
+  }
+ 
+  .navbar-toggler:hover {
+    border: none;
+    background-color: transparent;
+  
+  }
+  
+  .navbar-toggler:focus {
+    box-shadow: none !important;
+  }
+
+  .navbar-toggler-icon {
+    width: 30px;
+    height: 30px;
+  }
+
+  .navbar-nav {
+    align-items: flex-end;
+    padding-inline: 0.75rem;
+  }
+
+  .nav-link {
+    text-align: left;
+    padding: 10px;
+  }
+
+  #home img {
+    max-width: 75%; /* Ajusta el tamaño máximo del logo al 50% */
+    height: auto; /* Mantiene las proporciones */
+  }
+  
+  .orbit-circle {
+    transform: scale(0.5); /* Reduce los círculos al 50% de su tamaño original */
+  }
+
+  .orbit-1 {
+    width: 100px;  /* 50% de 200px */
+    height: 100px; /* 50% de 200px */
+    top: 10%;
+    left: 15%;
+    animation-duration: 10s;
+  }
+  
+  .orbit-2 {
+    width: 200px;  /* 50% de 400px */
+    height: 200px; /* 50% de 400px */
+    top: 20%;
+    right: 10%;
+    animation-duration: 14s;
+  }
+  
+  .orbit-3 {
+    width: 150px;  /* 50% de 300px */
+    height: 150px; /* 50% de 300px */
+    bottom: 15%;
+    left: 20%;
+    animation-duration: 12s;
+  }
+  
+  .calidad-section .row {
+    flex-direction: column-reverse; /* Invertir el orden de los elementos */
+  }
+
+  .calidad-section img.img-fluid {
+    margin-top: 1rem;
+  }
+
+  .clients-section .client-card {
+    margin-top: 1rem;
+  }
+
+  /* Sección de contacto */
 .contact-section {
   padding: 60px 0;
   background-color: #f9f9f9;
@@ -558,77 +724,84 @@ section {
   margin: 0 auto;
 }
 
-.contact-section .info-box,
-.contact-section .php-email-form,
-.contact-section .map-container {
+/* Mantiene la disposición original en pantallas grandes */
+.contact-section .info-box {
   flex: 1;
   min-width: 300px;
-  padding: 20px;
   background-color: white;
   border-radius: 8px;
+  padding: 20px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   margin: 10px;
-}
-
-.contact-section .php-email-form {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.contact-section h2 {
-  font-size: 2rem;
-  margin-bottom: 20px;
-}
-
-.contact-section p {
-  margin-bottom: 20px;
-}
-
-.contact-section .form-group {
-  margin-bottom: 15px;
-}
-
-.contact-section .form-group input,
-.contact-section .form-group textarea {
-  width: 100%;
-  padding: 10px;
-  border-radius: 5px;
-  border: 1px solid #ccc;
-  box-sizing: border-box;
-}
-
-.contact-section .php-email-form button {
-  background-color: #dd1414;
-  border: none;
-  padding: 10px 30px;
-  color: white;
-  font-size: 1rem;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-.contact-section .php-email-form button:hover {
-  background-color: #bb1010;
-}
-
-.contact-section .map-container iframe {
-  width: 100%;
-  height: 100%;
-  border: 0;
-  border-radius: 8px;
-}
-
-.contact-section .info-box {
   text-align: left;
 }
 
-.contact-section .info-box h3 {
-  font-size: 1.5rem;
-  margin-bottom: 10px;
+.contact-section .map-container-xl {
+  margin-bottom: 20px;
+  width: 100%;
+  height: 200px;
+  border-radius: 8px;
+  overflow: hidden;
 }
 
-.contact-section .info-box p {
-  font-size: 1rem;
-  margin-bottom: 10px;
+.contact-section .map-container-xl iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
 }
+
+/* Para pantallas pequeñas, hacemos que el mapa esté dentro de la sección de "Dirección" */
+/* Sección de contacto */
+.contact-section {
+  padding: 60px 0;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+.contact-section .container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: stretch;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Mantiene la disposición original en pantallas grandes */
+.contact-section .info-box {
+  flex: 1;
+  min-width: 300px;
+  background-color: white;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin: 10px;
+  text-align: left;
+}
+
+.contact-section .map-container-xl {
+  margin-bottom: 20px;
+  width: 100%;
+  height: 200px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.contact-section .map-container-xl iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.map-container-xl {
+  display: none; /* Ocultar el mapa grande */
+}
+
+.map-container-xs {
+  display: block; /* Mostrar el mapa pequeño */
+}
+
+}
+
+
+

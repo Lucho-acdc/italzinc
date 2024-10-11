@@ -41,3 +41,13 @@ window.addEventListener('scroll', showCardsOnScroll);
 // Asegura que las tarjetas que ya están visibles se muestren
 showCardsOnScroll();
 
+const navbarToggler = document.querySelector('.navbar-toggler');
+const navbarCollapse = document.querySelector('.navbar-collapse');
+
+document.querySelectorAll('.nav-link').forEach((link) => {
+  link.addEventListener('click', () => {
+    if (navbarToggler.getAttribute('aria-expanded') === 'true') {
+      navbarToggler.click(); // Colapsa el menú
+    }
+  });
+});
