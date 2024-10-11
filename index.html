@@ -17,38 +17,46 @@
 
     <!-- Barra de navegación -->
     <nav class="navbar navbar-expand-lg" id="header" style="z-index: 2;">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#home">
-                <img src="assets/img/nombre.png" alt="Logo Italzinc">
-            </a>
-
-            <div id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link active" href="#home">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#empresa">La Empresa</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#servicios">Servicios</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#calidad">Calidad</a>
-                    </li>
-                    <li class="nav-item">
+      <div class="container-fluid">
+          <a class="navbar-brand" href="#home">
+              <img src="assets/img/nombre.png" alt="Logo Italzinc" style="max-width: 100px;">
+          </a>
+  
+          <!-- Botón hamburguesa -->
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+          </button>
+  
+          <!-- Menú colapsable -->
+          <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+              <ul class="navbar-nav">
+                  <li class="nav-item">
+                      <a class="nav-link active" href="#home">Home</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="#empresa">La Empresa</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="#servicios">Servicios</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="#calidad">Calidad</a>
+                  </li>
+                  <li class="nav-item">
                       <a class="nav-link" href="#clientes">Clientes</a>
-                    </li>
-                    <li class="nav-item">
+                  </li>
+                  <li class="nav-item">
                       <a class="nav-link" href="#medioambiente">Sustentabilidad</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#contacto">Contacto</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="#contacto">Contacto</a>
+                  </li>
+              </ul>
+          </div>
+      </div>
+  </nav>
+  
+  
 
     <!-- Sección de bienvenida (Home) -->
     <section id="home" class="text-center my-5" style="position: relative;">

@@ -80,7 +80,7 @@ section {
 #header {
   background-color: rgba(255, 255, 255, 0.9); /* Transparencia para darle un toque flotante */
   backdrop-filter: blur(10px); /* Efecto de desenfoque detrás de la navbar */
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease, padding 0.3s ease; /* Añadida transición para padding */
   position: fixed;
   top: 0;
   width: 100%;
@@ -98,14 +98,56 @@ section {
   height: auto;
 }
 
+/* Para pantallas pequeñas (mobile) */
+@media (max-width: 768px) {
+  .navbar-brand img {
+    max-width: 100px; /* Tamaño del logo más pequeño en móviles */
+    height: auto;
+  }
+  /* Ajustes para dispositivos móviles */
+@media (max-width: 768px) {
+  .navbar-brand img {
+    max-width: 100px; /* Tamaño del logo más pequeño en móviles */
+    height: auto;
+  }
+
+  /* Asegura que el menú colapsado se despliegue correctamente */
+  .navbar-toggler {
+    border: none;
+  }
+
+  .navbar-toggler-icon {
+    background-color: #333; /* Color del ícono hamburguesa */
+  }
+
+  .navbar-collapse {
+    justify-content: flex-end;
+  }
+
+  .nav-link {
+    color: #333;
+    text-align: right;
+    padding-right: 20px; /* Para alinear mejor los elementos */
+  }
+
+  .nav-link:hover {
+    color: #dd1414;
+  }
+}
+
+}
+
+
+/* Estilos para los links de la barra de navegación */
 .navbar-dark .navbar-nav .nav-link {
   font-size: 14px;
   font-weight: 400;
   color: #333;
   padding: 5px 10px;
-  transition: color 0.4s ease; /* Transición más lenta para suavidad */
+  transition: color 0.4s ease, padding 0.3s ease; /* Transición más lenta para suavidad */
 }
 
+/* Enlaces activos en la navbar */
 .navbar-dark .navbar-nav .nav-link.active {
   color: #dd1414;
   font-weight: 600;
@@ -117,12 +159,14 @@ section {
   text-decoration: none;
 }
 
+/* Efectos hover y activo para los enlaces */
 .nav-link.active,
 .nav-link:hover {
   color: #dd1414 !important; /* Color del enlace en hover y activo */
   text-shadow: 0 0 5px rgba(255, 0, 0, 0.3); /* Sombra suave en hover */
 }
 
+/* Línea elegante debajo de los enlaces */
 .nav-link::after {
   content: '';
   position: absolute;
@@ -134,10 +178,12 @@ section {
   transition: width 0.4s ease, left 0.4s ease; /* Transiciones más lentas */
 }
 
+/* Efecto de la línea cuando el enlace está activo */
 .nav-link.active::after {
   width: 90%; /* Estiramiento suave al 90% del ancho */
   left: 5%;
 }
+
 
 
 /* Estilos para la sección de bienvenida */
