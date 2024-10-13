@@ -641,6 +641,24 @@ section {
   display: none; /* El mapa pequeño está oculto en pantallas grandes */
 }
 
+.whatsapp_float {
+  position: fixed;
+  bottom: 25px; /* Ajusta la distancia desde el borde inferior */
+  right: 25px; /* Ajusta la distancia desde el borde derecho */
+  z-index: 100;
+}
+
+.whatsapp_icon {
+  width: 50px; /* Ajusta el tamaño del ícono */
+  height: 50px;
+  border-radius: 50%; /* Para hacer el ícono circular */
+  transition: transform 0.3s ease; /* Animación en hover */
+}
+
+.whatsapp_icon:hover {
+  transform: scale(1.1); /* Aumenta ligeramente el tamaño al pasar el mouse */
+}
+
 
 /* Estilos específicos para pantallas tipo tablet */
 @media (min-width: 769px) and (max-width: 1024px) {
