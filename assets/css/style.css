@@ -643,21 +643,29 @@ section {
 
 .whatsapp_float {
   position: fixed;
-  bottom: 25px; /* Ajusta la distancia desde el borde inferior */
-  right: 25px; /* Ajusta la distancia desde el borde derecho */
-  z-index: 100;
-}
-
-.whatsapp_icon {
-  width: 50px; /* Ajusta el tamaño del ícono */
+  width: 50px; /* Tamaño más pequeño */
   height: 50px;
-  border-radius: 50%; /* Para hacer el ícono circular */
-  transition: transform 0.3s ease; /* Animación en hover */
+  bottom: 25px;
+  right: 25px;
+  background-color: #25d366;
+  color: white;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 30px;
+  z-index: 100;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.whatsapp_icon:hover {
-  transform: scale(1.1); /* Aumenta ligeramente el tamaño al pasar el mouse */
+.whatsapp_float i {
+  color: white;
 }
+
+.whatsapp_float:hover {
+  background-color: #128c7e;
+}
+
 
 
 /* Estilos específicos para pantallas tipo tablet */
