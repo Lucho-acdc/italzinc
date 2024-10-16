@@ -22,6 +22,7 @@ window.addEventListener("scroll", () => {
 });
 
 
+
 const cards = document.querySelectorAll('.portfolio-card');
 
 function showCardsOnScroll() {

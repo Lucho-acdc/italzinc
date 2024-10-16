@@ -8,6 +8,8 @@
 
 /* Estilos generales del cuerpo */
 body {
+  max-width: 100vw; 
+  overflow-x: hidden;
   font-family: 'Lato', sans-serif !important;
   color: #333; /* Color principal del texto */
   background-color: #f8f9fa; /* Fondo claro */
@@ -89,19 +91,26 @@ section {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); /* Sombra más sutil */
 }
 
+.navbar-brand {
+  flex: 1; /* 1/3 del espacio */
+}
+
+.navbar-collapse {
+  flex: 2; /* 2/3 del espacio */
+}
+
 .navbar .container-fluid {
   width: 100vw;
-  padding-inline: 10px; /* Padding lateral más reducido */
+  padding-inline: 20px; /* Padding lateral más reducido */
 }
 
 .navbar .container-fluid .collapse {
   flex-grow: 0;
   align-items: end;
-  padding-inline: 10px;
 }
 
 .navbar-brand img {
-  max-width: 50%; /* Logo más pequeño */
+  max-width: 25%; /* Logo más pequeño */
   height: auto;
 }
 
@@ -165,6 +174,9 @@ section {
   padding: 20px;
   text-align: center;
   margin-bottom: 0px !important;
+
+  position: relative;
+  overflow: hidden;
 }
 
 #home img {
@@ -185,7 +197,9 @@ section {
   border-radius: 50%;
   border: 2px solid rgba(255, 0, 0, 0.5);
   animation: orbit 10s infinite alternate ease-in-out;
+  overflow: hidden; /* Esto oculta cualquier parte de las órbitas que sobresalga */
 }
+
 
 .orbit-1 {
   width: 200px;
@@ -645,8 +659,8 @@ section {
   position: fixed;
   width: 50px; /* Tamaño más pequeño */
   height: 50px;
-  bottom: 25px;
-  right: 25px;
+  bottom: 20px;
+  right: 20px;
   background-color: #25d366;
   color: white;
   border-radius: 50%;
@@ -678,12 +692,31 @@ section {
   /* Ajustes para la navegación en tablet */
   .navbar-nav {
     flex-direction: row;
-    justify-content: flex-end;
+    align-items: flex-end;
   }
 
   .nav-link {
-    padding: 10px;
+    text-align: left;
     font-size: 16px; /* Tamaño de fuente más grande en tablet */
+  }
+
+  .navbar-toggler {
+    float: right;
+    margin-left: auto;
+    border: none;
+    padding: 0;
+    right: 0;
+    border: none !important;
+  }
+ 
+  .navbar-toggler:hover {
+    border: none;
+    background-color: transparent;
+  
+  }
+
+  .navbar-toggler:focus {
+    box-shadow: none !important;
   }
 
   /* Ajustes en la sección home para tablet */
@@ -731,6 +764,7 @@ section {
 
 
 /* Ajustes de la navbar en pantallas pequeñas */
+
 @media (max-width: 768px) {
 
   #header {
@@ -739,30 +773,34 @@ section {
     width: 100vw;
   }
 
+  #home {
+    padding-top: 50px;
+  }
+
   section {
-    min-height: 100vh; /* Asegura que cada sección ocupe al menos la pantalla completa */
-    scroll-margin-top: 50px; /* Ajusta este valor al tamaño de tu navbar */
+    min-height: 100vh;
+    scroll-margin-top: 50px;
   }
 
   .navbar-brand img {
     max-width: 100px;
+    height: auto;
+    margin-left: 0;
+  }
+
+  .navbar .container-fluid {
+    display: block;
   }
 
   .navbar-toggler {
+    float: right;
     margin-left: auto;
-    border: none;
     padding: 0;
-    right: 0;
-    border: none;
+    border: none !important;
   }
- 
-  .navbar-toggler:hover {
-    border: none;
+
+  .navbar-toggler:hover, .navbar-toggler:focus {
     background-color: transparent;
-  
-  }
-  
-  .navbar-toggler:focus {
     box-shadow: none !important;
   }
 
@@ -782,144 +820,100 @@ section {
   }
 
   #home img {
-    max-width: 75%; /* Ajusta el tamaño máximo del logo al 50% */
-    height: auto; /* Mantiene las proporciones */
+    max-width: 75%;
+    height: auto;
   }
-  
+
   .orbit-circle {
-    transform: scale(0.5); /* Reduce los círculos al 50% de su tamaño original */
+    transform: scale(0.5);
+  }
+
+  .orbit-1, .orbit-2, .orbit-3 {
+    width: auto;
+    height: auto;
+    max-width: 100vw;
+    max-height: 100vh;
   }
 
   .orbit-1 {
-    width: 100px;  /* 50% de 200px */
-    height: 100px; /* 50% de 200px */
-    top: 10%;
-    left: 15%;
-    animation-duration: 10s;
+    width: 80px;
+    height: 80px;
   }
-  
+
   .orbit-2 {
-    width: 200px;  /* 50% de 400px */
-    height: 200px; /* 50% de 400px */
-    top: 20%;
-    right: 10%;
-    animation-duration: 14s;
+    width: 150px;
+    height: 150px;
   }
-  
+
   .orbit-3 {
-    width: 150px;  /* 50% de 300px */
-    height: 150px; /* 50% de 300px */
-    bottom: 15%;
-    left: 20%;
-    animation-duration: 12s;
+    width: 120px;
+    height: 120px;
   }
-  
+
   .calidad-section .row {
-    flex-direction: column-reverse; /* Invertir el orden de los elementos */
+    flex-direction: column-reverse;
   }
 
-  .calidad-section img.img-fluid {
-    margin-top: 1rem;
-  }
-
+  .calidad-section img.img-fluid,
   .clients-section .client-card {
     margin-top: 1rem;
   }
 
   /* Sección de contacto */
-.contact-section {
-  padding: 60px 0;
-  background-color: #f9f9f9;
-  text-align: center;
-}
+  .contact-section {
+    padding: 60px 0;
+    background-color: #f9f9f9;
+    text-align: center;
+  }
 
-.contact-section .container {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  align-items: stretch;
-  max-width: 1200px;
-  margin: 0 auto;
-}
+  .contact-section .container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: stretch;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
 
-/* Mantiene la disposición original en pantallas grandes */
-.contact-section .info-box {
-  flex: 1;
-  min-width: 300px;
-  background-color: white;
-  border-radius: 8px;
-  padding: 20px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  margin: 10px;
-  text-align: left;
-}
+  .contact-section .info-box {
+    padding: 15px;
+    text-align: left;
+  }
 
-.contact-section .map-container-xl {
-  margin-bottom: 20px;
-  width: 100%;
-  height: 200px;
-  border-radius: 8px;
-  overflow: hidden;
-}
+  .contact-section h3 {
+    font-size: 1.1rem; /* Un poco más pequeño */
+  }
 
-.contact-section .map-container-xl iframe {
-  width: 100%;
-  height: 100%;
-  border: 0;
-}
+  .contact-section p {
+    font-size: 0.9rem; /* Ajustar tamaño de texto */
+  }
 
-/* Para pantallas pequeñas, hacemos que el mapa esté dentro de la sección de "Dirección" */
-/* Sección de contacto */
-.contact-section {
-  padding: 60px 0;
-  background-color: #f9f9f9;
-  text-align: center;
-}
+  .contact-section i {
+    font-size: 1.3rem; /* Iconos más pequeños */
+  }
 
-.contact-section .container {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  align-items: stretch;
-  max-width: 1200px;
-  margin: 0 auto;
-}
+  .contact-section .map-container-xl {
+    display: none;
+    margin-bottom: 20px;
+    width: 100%;
+    height: 200px;
+    border-radius: 8px;
+    overflow: hidden;
+  }
 
-/* Mantiene la disposición original en pantallas grandes */
-.contact-section .info-box {
-  flex: 1;
-  min-width: 300px;
-  background-color: white;
-  border-radius: 8px;
-  padding: 20px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  margin: 10px;
-  text-align: left;
-}
+  .contact-section .map-container-xs {
+    display: block;
+  }
 
-.contact-section .map-container-xl {
-  margin-bottom: 20px;
-  width: 100%;
-  height: 200px;
-  border-radius: 8px;
-  overflow: hidden;
-}
-
-.contact-section .map-container-xl iframe {
-  width: 100%;
-  height: 100%;
-  border: 0;
-}
-
-.map-container-xl {
-  display: none; /* Ocultar el mapa grande */
-}
-
-.map-container-xs {
-  display: block; /* Mostrar el mapa pequeño */
-}
+  .contact-section .map-container-xl iframe,
+  .contact-section .map-container-xs iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+  }
 
 }
+
 
 
 
