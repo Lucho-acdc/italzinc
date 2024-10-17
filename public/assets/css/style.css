@@ -294,7 +294,7 @@ section {
 }
 
 .about-content .btn-primary:hover {
-  background-color: #bb1010;
+  background-color: #bb1010 !important;
   border-color: #bb1010;
 }
 
@@ -458,7 +458,7 @@ section {
 }
 
 .calidad-section .btn-primary:hover {
-  background-color: #bb1010;
+  background-color: #bb1010 !important;
   border-color: #bb1010;
 }
 
@@ -653,6 +653,15 @@ section {
 
 .map-container-xs {
   display: none; /* El mapa pequeño está oculto en pantallas grandes */
+}
+
+.g-recaptcha {
+  display: none; /* Inicialmente oculto */
+  transform: scale(0.85); /* Reducir el tamaño del reCAPTCHA */
+  transform-origin: 0 0; /* Mantener el origen en la esquina superior izquierda */
+  margin: 20px auto; /* Centrando con margen automático */
+  display: flex;
+  justify-content: center;
 }
 
 .whatsapp_float {

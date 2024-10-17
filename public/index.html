@@ -12,6 +12,9 @@
     <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.css">
+
 </head>
 <body>
 
@@ -60,6 +63,7 @@
 
     <!-- Sección de bienvenida (Home) -->
     <section id="home" class="text-center my-5">
+
       <div id="mainLogo">
         <img src="assets/img/logoitalzinc.png" alt="logoitalzinc" class="main-circle">
         <p class="lead text-dark mt-4">Especialistas en tratamientos de superficies desde 1986.</p>
@@ -74,16 +78,20 @@
     
        
 
-    <section id="empresa" class="about-section">
+  <section id="empresa" class="about-section">
       <div class="container">
         <div class="row align-items-center">
-          <div class="col-lg-6">
+          
+          <!-- Imagen con animación desde la derecha -->
+          <div class="col-lg-6" data-aos="fade-right">
             <div class="about-img">
               <img src="assets/img/principal.PNG" class="img-fluid" alt="Sobre Italzinc">
             </div>
           </div>
+          
+          <!-- Contenido con animación de subida -->
           <div class="col-lg-6">
-            <div class="about-content">
+            <div class="about-content" data-aos="fade-left">
               <h2>Sobre Italzinc</h2>
               <p>
                 Desde 1986, Italzinc se ha especializado en brindar soluciones de galvanizado de alta calidad, garantizando la protección y durabilidad de los productos metálicos. Con un equipo altamente capacitado y tecnología de vanguardia, nos destacamos por nuestra capacidad de adaptarnos a las necesidades específicas de cada cliente.
@@ -91,21 +99,23 @@
               <p>
                 Nos enorgullece ser líderes en el sector, ofreciendo servicios que cumplen con los más altos estándares de calidad, sostenibilidad e innovación. Nuestra misión es asegurar la máxima protección y mejorar la vida útil de los productos de nuestros clientes.
               </p>
-              <a href="#servicios" class="btn btn-primary mt-3">Ver más sobre nuestros servicios</a>
+              <a href="#servicios" class="btn btn-primary mt-3" data-aos="zoom-in">Ver más sobre nuestros servicios</a>
             </div>
           </div>
+          
         </div>
       </div>
-    </section>
+  </section>
+    
     
 
 <!-- Sección de Servicios -->
 <section id="servicios" class="services-section">
-  <h2 class="section-title text-center">Nuestros Servicios</h2>
+  <h2 class="section-title text-center" data-aos="zoom-in">Nuestros Servicios</h2>
   <div class="container">
     <div class="row">
       <!-- Card 1: Pintura en Polvo -->
-      <div class="col-md-4">
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
         <div class="portfolio-card">
           <div class="portfolio-wrapper">
             <div class="portfolio-image">
@@ -121,7 +131,7 @@
       </div>
 
       <!-- Card 2: Zincado Quieto -->
-      <div class="col-md-4">
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
         <div class="portfolio-card">
           <div class="portfolio-wrapper">
             <div class="portfolio-image">
@@ -137,7 +147,7 @@
       </div>
 
       <!-- Card 3: Zincado Rotativo -->
-      <div class="col-md-4">
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
         <div class="portfolio-card">
           <div class="portfolio-wrapper">
             <div class="portfolio-image">
@@ -153,7 +163,7 @@
       </div>
 
       <!-- Card 4: Niquelado -->
-      <div class="col-md-4">
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="400">
         <div class="portfolio-card">
           <div class="portfolio-wrapper">
             <div class="portfolio-image">
@@ -169,7 +179,7 @@
       </div>
 
       <!-- Card 5: Latonado -->
-      <div class="col-md-4">
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="500">
         <div class="portfolio-card">
           <div class="portfolio-wrapper">
             <div class="portfolio-image">
@@ -185,7 +195,7 @@
       </div>
 
       <!-- Card 6: Fosfato de Zinc -->
-      <div class="col-md-4">
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="600">
         <div class="portfolio-card">
           <div class="portfolio-wrapper">
             <div class="portfolio-image">
@@ -201,7 +211,7 @@
       </div>
 
       <!-- Card 7: Fosfato de Manganeso -->
-      <div class="col-md-4">
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="700">
         <div class="portfolio-card">
           <div class="portfolio-wrapper">
             <div class="portfolio-image">
@@ -217,7 +227,7 @@
       </div>
 
       <!-- Card 8: Granallado -->
-      <div class="col-md-4">
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="800">
         <div class="portfolio-card">
           <div class="portfolio-wrapper">
             <div class="portfolio-image">
@@ -233,7 +243,7 @@
       </div>
 
       <!-- Card 9: Estañado -->
-      <div class="col-md-4">
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="900">
         <div class="portfolio-card">
           <div class="portfolio-wrapper">
             <div class="portfolio-image">
@@ -253,54 +263,65 @@
 </section>
 
 
+
 <section id="calidad" class="calidad-section">
   <div class="container">
     <div class="row align-items-center">
-      <div class="col-lg-6">
+      
+      <!-- Imagen con animación de deslizamiento hacia la derecha -->
+      <div class="col-lg-6" data-aos="fade-right">
         <img src="assets/img/calidad/galgas.jpg" alt="Calidad Italzinc" class="img-fluid">
       </div>
-      <div class="col-lg-6">
+
+      <!-- Contenido con animación de desvanecimiento hacia arriba -->
+      <div class="col-lg-6" data-aos="fade-up">
         <h3>Calidad en cada proceso</h3>
-        <p>En Italzinc, cada trabajo que realizamos es una promesa. Prometemos resistencia, durabilidad y seguridad. No importa la magnitud del desafío, estamos a la altura con un compromiso inquebrantable.</p>
-        <p>Desde hace más de 30 años, no solo galvanizamos metales: galvanizamos confianza. Sabemos que cada pieza que tratamos protege proyectos, sueños y resultados. Por eso, nuestra prioridad es que el trabajo que entregamos esté por encima de las expectativas, siempre.</p>
-        <p>Nuestro enfoque es simple: hacemos el trabajo bien desde el principio. No hay atajos, no hay excusas. En Italzinc, nos aseguramos de que cada proceso, cada detalle, refleje nuestra pasión por la excelencia y nuestra responsabilidad con nuestros clientes.</p>
+        <p>En Italzinc, cada trabajo que realizamos es una promesa. Prometemos resistencia, durabilidad y seguridad...</p>
+        <p>Desde hace más de 30 años, no solo galvanizamos metales: galvanizamos confianza...</p>
+        <p>Nuestro enfoque es simple: hacemos el trabajo bien desde el principio...</p>
+        
+        <!-- Lista con animación individual para cada elemento -->
         <ul class="list-unstyled">
-          <li><i class="bi bi-check-circle-fill"></i> Inspecciones rigurosas en cada etapa</li>
-          <li><i class="bi bi-check-circle-fill"></i> Procesos innovadores que garantizan resultados de primera</li>
-          <li><i class="bi bi-check-circle-fill"></i> Adaptación personalizada a cada proyecto</li>
-          <li><i class="bi bi-check-circle-fill"></i> Compromiso con la sostenibilidad</li>
+          <li data-aos="fade-up" data-aos-delay="100"><i class="bi bi-check-circle-fill"></i> Inspecciones rigurosas en cada etapa</li>
+          <li data-aos="fade-up" data-aos-delay="200"><i class="bi bi-check-circle-fill"></i> Procesos innovadores que garantizan resultados de primera</li>
+          <li data-aos="fade-up" data-aos-delay="300"><i class="bi bi-check-circle-fill"></i> Adaptación personalizada a cada proyecto</li>
+          <li data-aos="fade-up" data-aos-delay="400"><i class="bi bi-check-circle-fill"></i> Compromiso con la sostenibilidad</li>
         </ul>
-        <a href="#contacto" class="btn btn-primary mt-3">Conoce nuestra forma de hacer las cosas</a>
+        
+        <!-- Botón con animación de zoom -->
+        <a href="#contacto" class="btn btn-primary mt-3" data-aos="zoom-in" data-aos-delay="500">Conoce nuestra forma de hacer las cosas</a>
       </div>
+      
     </div>
   </div>
 </section>
 
 
 
+
 <section id="clientes" class="clients-section">
   <div class="container">
-    <div class="section-title text-center">
+    <div class="section-title text-center" data-aos="zoom-in">
       <h2>Clientes que confían en nosotros</h2>
       <p>Estamos orgullosos de trabajar con algunas de las empresas más reconocidas del sector.</p>
     </div>
     <div class="row">
       <!-- Cliente 1 -->
-      <div class="col-lg-4 col-md-6">
+      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
         <div class="client-card">
           <img src="assets/img/clientes/clientes-1.png" class="img-fluid" alt="Cliente 1">
           <p>Empresa líder en fabricación de componentes metálicos.</p>
         </div>
       </div>
       <!-- Cliente 2 -->
-      <div class="col-lg-4 col-md-6">
+      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
         <div class="client-card">
           <img src="assets/img/clientes/clientes-2.png" class="img-fluid" alt="Cliente 2">
           <p>Proveedor de maquinaria industrial a nivel global.</p>
         </div>
       </div>
       <!-- Cliente 3 -->
-      <div class="col-lg-4 col-md-6">
+      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
         <div class="client-card">
           <img src="assets/img/clientes/clientes-3.png" class="img-fluid" alt="Cliente 3">
           <p>Referente en el sector automotriz con soluciones avanzadas.</p>
@@ -309,48 +330,42 @@
     </div>
     <div class="row">
       <!-- Cliente 4 -->
-      <div class="col-lg-4 col-md-6">
+      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
         <div class="client-card">
           <img src="assets/img/clientes/clientes-4.png" class="img-fluid" alt="Cliente 4">
           <p>Referente en el sector automotriz con soluciones avanzadas.</p>
         </div>
       </div>
       <!-- Cliente 5 -->
-      <div class="col-lg-4 col-md-6">
+      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="500">
         <div class="client-card">
           <img src="assets/img/clientes/clientes-5.png" class="img-fluid" alt="Cliente 5">
           <p>Referente en el sector automotriz con soluciones avanzadas.</p>
         </div>
       </div>
       <!-- Cliente 6 -->
-      <div class="col-lg-4 col-md-6">
+      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="600">
         <div class="client-card">
           <img src="assets/img/clientes/clientes-6.png" class="img-fluid" alt="Cliente 6">
           <p>Referente en el sector automotriz con soluciones avanzadas.</p>
         </div>
       </div>
-      <!-- Agregar más clientes según sea necesario -->
     </div>
   </div>
 </section>
 
 
+
 <section id="medioambiente" class="environment-section">
   <div class="container">
-    <div class="section-title">
+    <div class="section-title" data-aos="zoom-in">
       <h2>Nuestro Compromiso con el Planeta</h2>
       <p>En Italzinc, no solo transformamos metales, también cuidamos el entorno en el que todos vivimos.</p>
     </div>
-    <div class="content">
-      <p>
-        Cada paso que damos, en cada proceso, está guiado por un profundo respeto por el medioambiente. Sabemos que cada acción cuenta, por eso trabajamos día a día para hacer de nuestras operaciones algo más que eficientes: buscamos que sean sostenibles.
-      </p>
-      <p>
-        Ya sea en nuestros procesos de galvanizado, recubrimiento, o cualquier otro servicio, nos esforzamos por reducir nuestra huella ambiental. Optamos por tecnologías y prácticas que minimicen el desperdicio y promuevan el uso responsable de los recursos naturales. Nuestro compromiso no es solo con la calidad, sino con un futuro donde la industria y el medioambiente puedan convivir en equilibrio.
-      </p>
-      <p>
-        Creemos que un buen trabajo no se mide solo en resultados, sino en el impacto que dejamos en el mundo. Por eso, seguimos buscando formas de mejorar, convencidos de que cuidar el planeta es parte esencial de nuestra responsabilidad.
-      </p>
+    <div class="content" data-aos="fade-up" data-aos-delay="100">
+      <p>Cada paso que damos, en cada proceso, está guiado por un profundo respeto por el medioambiente. Sabemos que cada acción cuenta, por eso trabajamos día a día para hacer de nuestras operaciones algo más que eficientes: buscamos que sean sostenibles.</p>
+      <p>Ya sea en nuestros procesos de galvanizado, recubrimiento, o cualquier otro servicio, nos esforzamos por reducir nuestra huella ambiental. Optamos por tecnologías y prácticas que minimicen el desperdicio y promuevan el uso responsable de los recursos naturales.</p>
+      <p>Creemos que un buen trabajo no se mide solo en resultados, sino en el impacto que dejamos en el mundo. Por eso, seguimos buscando formas de mejorar, convencidos de que cuidar el planeta es parte esencial de nuestra responsabilidad.</p>
     </div>
   </div>
 </section>
@@ -358,27 +373,29 @@
 
 
 <section id="contacto" class="contact-section">
-  <h2>Contactanos</h2>
-  <p>Estamos aquí para brindarte el mejor servicio al cliente. No dudes en escribirnos o llamarnos.</p>
+  <h2 data-aos="zoom-in">Contactanos</h2>
+  <p data-aos="fade-up">Estamos aquí para brindarte el mejor servicio al cliente. No dudes en escribirnos o llamarnos.</p>
+  
   <div class="container">
-    <div class="info-box">
-      <div class="map-container-xs">
+    <!-- Información de contacto con animaciones -->
+    <div class="info-box" data-aos="fade-up" data-aos-delay="100">
+      <div class="map-container-xs" data-aos="fade-right">
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3285.8169007900174!2d-58.52617842452708!3d-34.558191055094746!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcb73d901b3d9d%3A0x8c847e5e5c943edc!2sGalvanotecnia%20Italzinc%20SRL!5e0!3m2!1ses-419!2sar!4v1728265668979!5m2!1ses-419!2sar" width="100%" height="450" frameborder="0" style="border:0;" allowfullscreen></iframe>
       </div>
-      <h3><i class="bi bi-geo-alt"></i> Dirección</h3>
-      <p>Lavalle 2577, Villa Maipú, Buenos Aires</p>
-      <h3><i class="bi bi-telephone"></i> Teléfono</h3>
-      <p>+54 11 4752-1234</p>
-      <h3><i class="bi bi-whatsapp"></i> Whatsapp</h3>
-      <p>+54 11 4752-1234</p>
-      <h3><i class="bi bi-envelope"></i> Email</h3>
-      <p>info@italzinc.com.ar</p>
-      <h3><i class="bi bi-clock"></i> Horario</h3>
-      <p>Lunes a Viernes: 8:00 - 16:00</p>
+      <h3 data-aos="fade-up" data-aos-delay="200"><i class="bi bi-geo-alt"></i> Dirección</h3>
+      <p data-aos="fade-up" data-aos-delay="300">Lavalle 2577, Villa Maipú, Buenos Aires</p>
+      <h3 data-aos="fade-up" data-aos-delay="400"><i class="bi bi-telephone"></i> Teléfono</h3>
+      <p data-aos="fade-up" data-aos-delay="500">+54 11 4752-1234</p>
+      <h3 data-aos="fade-up" data-aos-delay="600"><i class="bi bi-whatsapp"></i> Whatsapp</h3>
+      <p data-aos="fade-up" data-aos-delay="700">+54 11 4752-1234</p>
+      <h3 data-aos="fade-up" data-aos-delay="800"><i class="bi bi-envelope"></i> Email</h3>
+      <p data-aos="fade-up" data-aos-delay="900">info@italzinc.com.ar</p>
+      <h3 data-aos="fade-up" data-aos-delay="1000"><i class="bi bi-clock"></i> Horario</h3>
+      <p data-aos="fade-up" data-aos-delay="1100">Lunes a Viernes: 8:00 - 16:00</p>
     </div>
 
-
-    <div class="php-email-form">
+    <!-- Formulario de contacto con animación -->
+    <div class="php-email-form" data-aos="fade-up" data-aos-delay="200">
       <form id="contactForm" action="/contact" method="post">
         <div class="form-group">
           <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
@@ -389,21 +406,17 @@
         <div class="form-group">
           <textarea name="mensaje" id="mensaje" placeholder="Tu mensaje" rows="5" required></textarea>
         </div>
-    
-        <!-- Google reCAPTCHA (inicialmente oculto) -->
-        <div class="g-recaptcha" id="recaptcha" data-sitekey="6Le0tWMqAAAAAJ7jK3m2k0hF4y2cB2loVbR8iZPm"></div>
-
-    
-        <button type="button" id="submitButton">Enviar</button>
+        <div class="g-recaptcha" id="recaptcha" data-sitekey="6Le0tWMqAAAAAJ7jK3m2k0hF4y2cB2loVbR8iZPm" style="display: none;"></div>
+        <button type="button" id="submitButton" data-aos="zoom-in" data-aos-delay="1300">Enviar</button>
       </form>
     </div>
-    
-    
-    <div class="map-container-xl">
+
+    <div class="map-container-xl" data-aos="fade-left" data-aos-delay="300">
       <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3285.8169007900174!2d-58.52617842452708!3d-34.558191055094746!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcb73d901b3d9d%3A0x8c847e5e5c943edc!2sGalvanotecnia%20Italzinc%20SRL!5e0!3m2!1ses-419!2sar!4v1728265668979!5m2!1ses-419!2sar" width="100%" height="450" frameborder="0" style="border:0;" allowfullscreen></iframe>
     </div>
   </div>
 </section>
+
 
 
 <a href="https://wa.me/5491123701678" class="whatsapp_float" target="_blank">
@@ -419,7 +432,9 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
-    
+
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script>
+ 
     <script src="assets/js/main.js"></script>
 </body>
 </html>

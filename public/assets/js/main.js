@@ -1,3 +1,4 @@
+AOS.init();
 const sections = document.querySelectorAll("section");
 const navLinks = document.querySelectorAll(".nav-link");
 
@@ -61,11 +62,18 @@ document.getElementById('submitButton').addEventListener('click', function (e) {
   const nombre = document.getElementById('nombre').value.trim();
   const email = document.getElementById('email').value.trim();
   const mensaje = document.getElementById('mensaje').value.trim();
+  const recaptcha = document.getElementById('recaptcha');
 
   // Validar que los campos no estén vacíos
   if (nombre === "" || email === "" || mensaje === "") {
     alert('Por favor, completa todos los campos antes de continuar.');
     return;
+  }
+
+  // Mostrar el reCAPTCHA si aún no está visible
+  if (recaptcha.style.display === 'none') {
+    recaptcha.style.display = 'block'; // Mostrar el reCAPTCHA
+    return; // Detener la ejecución para esperar la resolución del reCAPTCHA
   }
 
   // Verificar si el reCAPTCHA ha sido completado
@@ -97,6 +105,7 @@ document.getElementById('submitButton').addEventListener('click', function (e) {
     if (data.message === 'Gracias por tu mensaje, nos pondremos en contacto contigo pronto.') {
       document.getElementById('contactForm').reset();
       grecaptcha.reset(); // Restablecer el reCAPTCHA
+      recaptcha.style.display = 'none'; // Volver a ocultar el reCAPTCHA
     }
   })
   .catch(error => {
@@ -104,6 +113,7 @@ document.getElementById('submitButton').addEventListener('click', function (e) {
     alert('Hubo un error al enviar tu mensaje. Inténtalo de nuevo.');
   });
 });
+
 
 
 
