@@ -70,6 +70,26 @@ app.post('/contact', async (req, res) => {
 });
 
 
+
+// Función para generar un PIN aleatorio de 4 dígitos
+function generatePin() {
+    return Math.floor(1000 + Math.random() * 9000); // PIN de 4 dígitos
+  }
+  
+  // Actualizar el PIN cada 30 a 40 segundos
+  setInterval(() => {
+    currentPin = generatePin();
+    console.log(`Nuevo PIN generado: ${currentPin}`);
+  }, 30000 + Math.random() * 10000); // Intervalo entre 30 y 40 segundos
+  
+  // Ruta para obtener el PIN actual
+  app.get('/pin', (req, res) => {
+    res.json({ pin: currentPin });
+  });
+  
+
+
+
 // Iniciar el servidor
 app.listen(PORT, () => {
     console.log(`Servidor corriendo en el puerto ${PORT}`);
