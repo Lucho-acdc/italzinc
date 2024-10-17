@@ -162,44 +162,57 @@ section {
 }
 
 
-
-/* Estilos para la sección de bienvenida */
 #home {
-  height: 100vh; /* Ocupa toda la altura del viewport */
+  height: 100vh;
   padding-top: 100px;
-  display: flex; /* Flexbox para centrar el contenido */
-  flex-direction: column; /* Apila los elementos verticalmente */
-  justify-content: center; /* Centra el contenido verticalmente */
-  align-items: center; /* Centra el contenido horizontalmente */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   padding: 20px;
   text-align: center;
-  margin-bottom: 0px !important;
-
+  margin-bottom: 0 !important;
   position: relative;
   overflow: hidden;
 }
 
 #home img {
-  max-width: 100%; /* Asegura que la imagen no se desborde horizontalmente */
-  max-height: 50vh; /* Asegura que la imagen no ocupe más de la mitad del viewport */
-  height: auto; /* Mantiene las proporciones de la imagen */
+  max-width: 100%;
+  max-height: 50vh;
+  height: auto;
   width: auto;
 }
 
+/* Efecto de Flujo de Luz en el logo */
 .main-circle {
   position: relative;
   z-index: 1;
-  animation: fadeIn 2s forwards;
+  padding: 10px;
+  overflow: hidden; /* Oculta el brillo fuera del logo */
 }
 
+.main-circle::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -150%; /* Empieza fuera del logo */
+  width: 150%; /* Ajustamos el ancho del destello */
+  height: 100%;
+  background: linear-gradient(120deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 50%, rgba(255, 255, 255, 0) 100%);
+  box-shadow: 0 0 30px rgba(255, 255, 255, 0.8); /* Más suavidad y brillo alrededor */
+  filter: blur(15px); /* Suavizamos más el destello */
+  transform: skewX(-30deg) scale(1.2); /* Le agregamos una ligera inclinación y escala para dar dinamismo */
+  animation: lightSweep 6s linear infinite;
+}
+
+/* Órbitas */
 .orbit-circle {
   position: absolute;
   border-radius: 50%;
   border: 2px solid rgba(255, 0, 0, 0.5);
   animation: orbit 10s infinite alternate ease-in-out;
-  overflow: hidden; /* Esto oculta cualquier parte de las órbitas que sobresalga */
+  overflow: hidden;
 }
-
 
 .orbit-1 {
   width: 200px;
@@ -225,6 +238,26 @@ section {
   animation-duration: 12s;
 }
 
+/* Animación del Flujo de Luz */
+@keyframes lightSweep {
+  0% {
+    left: -150%;
+    opacity: 0.2; /* Inicia con baja opacidad */
+    transform: skewX(-25deg) scale(1.1); /* Pequeña inclinación */
+  }
+  50% {
+    left: 50%; /* Cruza por el centro */
+    opacity: 0.8; /* Incrementa opacidad en el centro */
+    transform: skewX(-25deg) scale(1.2); /* Aumenta ligeramente la escala */
+  }
+  100% {
+    left: 150%; /* Sale completamente del logo */
+    opacity: 0.2; /* Disminuye de nuevo la opacidad */
+    transform: skewX(-25deg) scale(1.1); /* Vuelve a la escala original */
+  }
+}
+
+/* Animación de las órbitas */
 @keyframes orbit {
   from {
     transform: rotate(0deg) translateX(100px);
@@ -234,6 +267,7 @@ section {
   }
 }
 
+/* Animación de aparición */
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -244,6 +278,7 @@ section {
     transform: scale(1);
   }
 }
+
 
 
 
