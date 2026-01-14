@@ -797,7 +797,6 @@ section {
   }
 }
 .calidad-section {
-  padding: 100px 0;
   background-color: #fff;
 }
 .calidad-intro .sub-title {
@@ -888,7 +887,6 @@ section {
   }
 }
 .about-section {
-  padding: 100px 0;
   background-color: #f8f9fa;
   position: relative;
 }
@@ -985,7 +983,6 @@ section {
   }
 }
 .environment-section {
-  padding: 100px 0;
   background-color: #f4f4f4;
   position: relative;
   overflow: hidden;
